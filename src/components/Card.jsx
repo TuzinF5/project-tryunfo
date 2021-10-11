@@ -2,9 +2,17 @@ import React from 'react';
 
 class Card extends React.Component {
   render() {
-    return (
-      <section> </section>
-    );
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.props;
+    return <section> </section>;
   }
 }
 
