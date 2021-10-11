@@ -66,6 +66,7 @@ class Form extends React.Component {
 
           <div>
             <label htmlFor="image-input">
+              Imagem
               <input
                 type="text"
                 name="image-input"
@@ -76,6 +77,7 @@ class Form extends React.Component {
           </div>
 
           <label htmlFor="rare-input">
+            Raridade
             <select name="rare-input" id="rare-input" data-testid="rare-input">
               <option value="normal">normal</option>
               <option value="raro">raro</option>
