@@ -36,17 +36,17 @@ class App extends React.Component {
       <div>
         <h1>Tryunfo</h1>
         <Form
-          cardName={valueState.cardName}
-          cardDescription={valueState.cardDescription}
+          cardName={ valueState.cardName }
+          cardDescription={ valueState.cardDescription }
           cardAttr1={ valueState.cardAttr1 }
           cardAttr2={ valueState.cardAttr2 }
           cardAttr3={ valueState.cardAttr3 }
           cardTrunfo={ valueState.cardTrunfo }
-          onInputChange={this.onInputChange}
+          onInputChange={ this.onInputChange }
         />
         <Card
-          cardName={valueState.cardName}
-          cardDescription={valueState.cardDescription}
+          cardName={ valueState.cardName }
+          cardDescription={ valueState.cardDescription }
           cardAttr1={ valueState.cardAttr1 }
           cardAttr2={ valueState.cardAttr2 }
           cardAttr3={ valueState.cardAttr3 }
