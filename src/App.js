@@ -31,6 +31,7 @@ class App extends React.Component {
   onSaveButtonClick() {}
 
   render() {
+    const valueState = this.state;
     return (
       <div>
         <h1>Tryunfo</h1>
