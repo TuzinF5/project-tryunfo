@@ -17,7 +17,10 @@ class Card extends React.Component {
     return (
       <section>
         <div>
-          <p value={cardName} data-testid="name-card">{cardName}</p>
+          <p data-testid="name-card" value={ cardName }>
+            {cardName}
+          </p>
+          <img data-testid="image-card" src={ cardImage } alt={ cardName } />
         </div>
       </section>
     );
