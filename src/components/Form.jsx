@@ -84,6 +84,8 @@ class Form extends React.Component {
                 name="attr3-input"
                 id="attr3-input"
                 data-testid="attr3-input"
+                value={ cardAttr3 }
+                onChange={ onInputChange }
               />
             </label>
           </div>
