@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
+  truthRender(props) {
+    return <p>{props}</p>;
+  }
+
   render() {
     const {
       cardName,
@@ -26,6 +30,11 @@ class Card extends React.Component {
           <p data-testid="attr2-card">{cardAttr2}</p>
           <p data-testid="attr3-card">{cardAttr3}</p>
           <p data-testid="rare-card">{cardRare}</p>
+          <div>
+            {
+              cardTrunfo ? <p data-testid="trunfo-card">Super Trunfo</p> : <p> </p>
+            }
+          </div>
         </div>
       </section>
     );
