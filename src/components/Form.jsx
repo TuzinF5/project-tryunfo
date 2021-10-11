@@ -51,6 +51,18 @@ class Form extends React.Component {
               />
             </label>
           </div>
+
+          <div>
+            <label htmlFor="attr3-input">
+              Terceiro atributo
+              <input
+                type="number"
+                name="attr3-input"
+                id="attr3-input"
+                data-testid="attr3-input"
+              />
+            </label>
+          </div>
         </form>
       </section>
     );
