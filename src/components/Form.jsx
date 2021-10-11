@@ -96,6 +96,12 @@ class Form extends React.Component {
               Super Trunfo
             </label>
           </div>
+
+          <div>
+            <button type="submit" data-testid="save-button">
+              Salvar
+            </button>
+          </div>
         </form>
       </section>
     );
