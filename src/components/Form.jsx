@@ -126,6 +126,8 @@ class Form extends React.Component {
                 name="trunfo-input"
                 id="trunfo-input"
                 data-testid="trunfo-input"
+                checked={ cardTrunfo }
+                onChange={ onInputChange }
               />
               Super Trunfo
             </label>
