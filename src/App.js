@@ -38,11 +38,13 @@ class App extends React.Component {
         <Form
           cardName={valueState.cardName}
           cardDescription={valueState.cardDescription}
+          cardAttr1={ valueState.cardAttr1 }
           onInputChange={this.onInputChange}
         />
         <Card
           cardName={valueState.cardName}
           cardDescription={valueState.cardDescription}
+          cardAttr1={ valueState.cardAttr1 }
         />
       </div>
     );
