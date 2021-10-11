@@ -16,6 +16,17 @@ class Form extends React.Component {
               />
             </label>
           </div>
+
+          <div>
+            <label htmlFor="description-input">
+              Descrição
+              <textarea
+                name="description-input"
+                id="description-input"
+                data-testid="description-input"
+              />
+            </label>
+          </div>
         </form>
       </section>
     );
