@@ -3,6 +3,10 @@ import Card from './components/Card';
 import Form from './components/Form';
 
 class App extends React.Component {
+  constructor() {
+    super();
+  }
+
   render() {
     return (
       <div>
