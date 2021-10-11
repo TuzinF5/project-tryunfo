@@ -4,7 +4,19 @@ class Form extends React.Component {
   render() {
     return (
       <section>
-        <form> </form>
+        <form>
+          <div>
+            <label htmlFor="name-input">
+              Nome
+              <input
+                type="text"
+                name="name-input"
+                id="name-input"
+                data-testid="name-input"
+              />
+            </label>
+          </div>
+        </form>
       </section>
     );
   }
