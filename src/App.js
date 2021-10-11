@@ -22,6 +22,14 @@ class App extends React.Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
   }
 
+  onInputChange({ target: { name, value } }) {
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  onSaveButtonClick() {}
+
   render() {
     return (
       <div>
