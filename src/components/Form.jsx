@@ -63,6 +63,17 @@ class Form extends React.Component {
               />
             </label>
           </div>
+
+          <div>
+            <label htmlFor="image-input">
+              <input
+                type="text"
+                name="image-input"
+                id="image-input"
+                data-testid="image-input"
+              />
+            </label>
+          </div>
         </form>
       </section>
     );
