@@ -37,9 +37,13 @@ class App extends React.Component {
         <h1>Tryunfo</h1>
         <Form
           cardName={valueState.cardName}
+          cardDescription={valueState.cardDescription}
           onInputChange={this.onInputChange}
         />
-        <Card cardName={valueState.cardName} />
+        <Card
+          cardName={valueState.cardName}
+          cardDescription={valueState.cardDescription}
+        />
       </div>
     );
   }
