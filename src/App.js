@@ -41,8 +41,13 @@ class App extends React.Component {
           cardAttr1={ valueState.cardAttr1 }
           cardAttr2={ valueState.cardAttr2 }
           cardAttr3={ valueState.cardAttr3 }
+          cardImage={ valueState.cardImage }
+          cardRare={ valueState.cardRare }
           cardTrunfo={ valueState.cardTrunfo }
+          hasTrunfo={ valueState.hasTrunfo }
+          isSaveButtonDisabled={ valueState.isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card
           cardName={ valueState.cardName }
