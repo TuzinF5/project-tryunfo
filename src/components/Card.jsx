@@ -21,6 +21,7 @@ class Card extends React.Component {
             {cardName}
           </p>
           <img data-testid="image-card" src={ cardImage } alt={ cardName } />
+          <p data-testid="description-card">{cardDescription}</p>
         </div>
       </section>
     );
