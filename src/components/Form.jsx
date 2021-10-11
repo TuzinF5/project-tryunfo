@@ -82,6 +82,18 @@ class Form extends React.Component {
               <option value="muito raro">muito raro</option>
             </select>
           </label>
+
+          <div>
+            <label htmlFor="trunfo-input">
+              <input
+                type="checkbox"
+                name="trunfo-input"
+                id="trunfo-input"
+                data-testid="trunfo-input"
+              />
+              Super Trunfo
+            </label>
+          </div>
         </form>
       </section>
     );
