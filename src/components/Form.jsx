@@ -29,6 +29,8 @@ class Form extends React.Component {
                 name="name-input"
                 id="name-input"
                 data-testid="name-input"
+                value={ cardName }
+                onChange={ onInputChange }
               />
             </label>
           </div>
