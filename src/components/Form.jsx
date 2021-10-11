@@ -98,6 +98,8 @@ class Form extends React.Component {
                 name="image-input"
                 id="image-input"
                 data-testid="image-input"
+                value={ cardImage }
+                onChange={ onInputChange }
               />
             </label>
           </div>
