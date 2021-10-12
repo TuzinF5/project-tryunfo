@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './components/Card';
+import CardList from './components/CardList';
 import Form from './components/Form';
 
 class App extends React.Component {
@@ -151,6 +152,9 @@ class App extends React.Component {
           cardImage={ valueState.cardImage }
           cardRare={ valueState.cardRare }
           cardTrunfo={ valueState.cardTrunfo }
+        />
+        <CardList
+          cardList={ valueState.cardList }
         />
       </div>
     );
