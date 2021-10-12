@@ -37,6 +37,10 @@ class Card extends React.Component {
   }
 }
 
+Card.defaultProps = {
+  cardTrunfo: '',
+};
+
 Card.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardDescription: PropTypes.string.isRequired,
@@ -48,7 +52,7 @@ Card.propTypes = {
   cardTrunfo: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.bool,
-  ]).isRequired,
+  ]),
 };
 
 export default Card;
