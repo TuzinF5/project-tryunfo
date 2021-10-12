@@ -36,7 +36,8 @@ class App extends React.Component {
   onSaveButtonClick() {
     const { cardName, cardDescription, cardAttr1,
       cardAttr2, cardAttr3, cardImage, cardRare, cardTrunfo } = this.state;
-    if (cardTrunfo) {
+    const result = this.validationCardTrunfo();
+    if (cardTrunfo && result === undefined) {
       this.setState((prevState) => ({
         cardList: [
           ...prevState.cardList,
