@@ -31,28 +31,36 @@ class App extends React.Component {
   }
 
   onSaveButtonClick() {
-    const { cardName,
+    const {
+      cardName,
       cardDescription,
-      cardAttr1, cardAttr2, cardAttr3, cardImage, cardRare } = this.state;
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+    } = this.state;
     this.setState((prevState) => ({
-      cardList: [...prevState.cardList, {
-        cardName,
-        cardDescription,
-        cardAttr1,
-        cardAttr2,
-        cardAttr3,
-        cardImage,
-        cardRare,
-      }],
+      cardList: [
+        ...prevState.cardList,
+        {
+          cardName,
+          cardDescription,
+          cardAttr1,
+          cardAttr2,
+          cardAttr3,
+          cardImage,
+          cardRare,
+        },
+      ],
+      cardName: '',
+      cardDescription: '',
+      cardImage: '',
     }));
   }
 
   numericalInputValidation() {
-    const {
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-    } = this.state;
+    const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
     const maximumNumber = 90;
     const minimumNumber = 0;
     const maximumNumberOfSum = 210;
@@ -70,21 +78,18 @@ class App extends React.Component {
       && sumNumber <= maximumNumberOfSum
     ) {
       return true;
-    } return false;
+    }
+    return false;
   }
 
   inputValidation() {
-    const {
-      cardName,
-      cardDescription,
-      cardImage,
-    } = this.state;
+    const { cardName, cardDescription, cardImage } = this.state;
     const result = this.numericalInputValidation();
     if (
       cardName !== ''
       && cardDescription !== ''
       && cardImage !== ''
-      && (result)
+      && result
     ) {
       return this.setState({
         isSaveButtonDisabled: false,
