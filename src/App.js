@@ -30,7 +30,22 @@ class App extends React.Component {
     // Link onde precisei entender o porque o setState recebe dois parametros => https://blog.matheuscastiglioni.com.br/atualizando-estado-dos-componentes-no-react/
   }
 
-  onSaveButtonClick() {}
+  onSaveButtonClick() {
+    const { cardName,
+      cardDescription,
+      cardAttr1, cardAttr2, cardAttr3, cardImage, cardRare } = this.state;
+    this.setState((prevState) => ({
+      cardList: [...prevState.cardList, {
+        cardName,
+        cardDescription,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        cardImage,
+        cardRare,
+      }],
+    }));
+  }
 
   numericalInputValidation() {
     const {
