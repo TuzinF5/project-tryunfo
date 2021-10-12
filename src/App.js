@@ -31,8 +31,14 @@ class App extends React.Component {
   onSaveButtonClick() {}
 
   dataValidation() {
-    const { cardName, cardDescription, cardImage } = this.state;
-    if (cardName !== '' && cardDescription !== '' && cardImage !== '') {
+    const { cardName, cardDescription, cardImage, cardAttr1 } = this.state;
+    const maximumNumber = 90;
+    if (
+      cardName !== ''
+      && cardDescription !== ''
+      && cardImage !== ''
+      && cardAttr1 <= maximumNumber
+    ) {
       return this.setState({
         isSaveButtonDisabled: false,
       });
