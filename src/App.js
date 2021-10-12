@@ -24,6 +24,8 @@ class App extends React.Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
     this.inputValidation = this.inputValidation.bind(this);
     this.numericalInputValidation = this.numericalInputValidation.bind(this);
+    this.deleteCard = this.deleteCard.bind(this);
+    this.validationCardTrunfo = this.validationCardTrunfo.bind(this);
   }
 
   onInputChange({ target: { name, value } }) {
@@ -83,6 +85,12 @@ class App extends React.Component {
     }
   }
 
+  validationCardTrunfo() {
+    const { cardList } = this.state;
+    const filtro = cardList.find((card) => card.cardTrunfo);
+    return filtro;
+  }
+
   numericalInputValidation() {
     const { cardAttr1, cardAttr2, cardAttr3 } = this.state;
     const maximumNumber = 90;
@@ -124,6 +132,21 @@ class App extends React.Component {
     });
   }
 
+  deleteCard({ target: { className } }) {
+    const identityClassName = className;
+    const { cardList } = this.state;
+    const cardObject = cardList
+      .find((card) => card.cardName === identityClassName);
+
+    const list = cardList;
+    const indexCardObject = list.indexOf(cardObject);
+    list.splice(indexCardObject, 1);
+
+    this.setState({
+      cardList: list,
+    });
+  }
+
   render() {
     const valueState = this.state;
     return (
@@ -155,6 +178,7 @@ class App extends React.Component {
         />
         <CardList
           cardList={ valueState.cardList }
+          deleteCard={ this.deleteCard }
         />
       </div>
     );
