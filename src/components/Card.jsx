@@ -2,10 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
-  truthRender(props) {
-    return <p>{props}</p>;
-  }
-
   render() {
     const {
       cardName,
