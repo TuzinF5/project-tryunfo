@@ -20,15 +20,26 @@ class App extends React.Component {
 
     this.onInputChange = this.onInputChange.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
+    this.dataValidation = this.dataValidation.bind(this);
   }
 
   onInputChange({ target: { name, value } }) {
-    this.setState({
-      [name]: value,
-    });
+    this.setState({ [name]: value }, () => this.dataValidation());
   }
 
   onSaveButtonClick() {}
+
+  dataValidation() {
+    const { cardName, cardDescription, cardImage } = this.state;
+    if (cardName !== '' && cardDescription !== '' && cardImage !== '') {
+      return this.setState({
+        isSaveButtonDisabled: false,
+      });
+    }
+    this.setState({
+      isSaveButtonDisabled: true,
+    });
+  }
 
   render() {
     const valueState = this.state;
