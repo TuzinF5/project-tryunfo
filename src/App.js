@@ -31,36 +31,55 @@ class App extends React.Component {
   }
 
   onSaveButtonClick() {
-    const {
-      cardName,
-      cardDescription,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-      cardImage,
-      cardRare,
-    } = this.state;
-    this.setState((prevState) => ({
-      cardList: [
-        ...prevState.cardList,
-        {
-          cardName,
-          cardDescription,
-          cardAttr1,
-          cardAttr2,
-          cardAttr3,
-          cardImage,
-          cardRare,
-        },
-      ],
-      cardName: '',
-      cardDescription: '',
-      cardImage: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
-      cardRare: 'normal',
-    }));
+    const { cardName, cardDescription, cardAttr1,
+      cardAttr2, cardAttr3, cardImage, cardRare, cardTrunfo } = this.state;
+    if (cardTrunfo) {
+      this.setState((prevState) => ({
+        cardList: [
+          ...prevState.cardList,
+          {
+            cardName,
+            cardDescription,
+            cardAttr1,
+            cardAttr2,
+            cardAttr3,
+            cardImage,
+            cardRare,
+            cardTrunfo,
+          },
+        ],
+        cardName: '',
+        cardDescription: '',
+        cardImage: '',
+        cardAttr1: '0',
+        cardAttr2: '0',
+        cardAttr3: '0',
+        cardRare: 'normal',
+        hasTrunfo: true,
+      }));
+    } else {
+      this.setState((prevState) => ({
+        cardList: [
+          ...prevState.cardList,
+          {
+            cardName,
+            cardDescription,
+            cardAttr1,
+            cardAttr2,
+            cardAttr3,
+            cardImage,
+            cardRare,
+          },
+        ],
+        cardName: '',
+        cardDescription: '',
+        cardImage: '',
+        cardAttr1: '0',
+        cardAttr2: '0',
+        cardAttr3: '0',
+        cardRare: 'normal',
+      }));
+    }
   }
 
   numericalInputValidation() {
