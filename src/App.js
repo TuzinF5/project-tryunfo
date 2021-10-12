@@ -143,9 +143,16 @@ class App extends React.Component {
     const indexCardObject = list.indexOf(cardObject);
     list.splice(indexCardObject, 1);
 
-    this.setState({
-      cardList: list,
-    });
+    if (cardObject.cardTrunfo) {
+      this.setState({
+        cardList: list,
+        hasTrunfo: false,
+      });
+    } else {
+      this.setState({
+        cardList: list,
+      });
+    }
   }
 
   render() {
