@@ -4,13 +4,14 @@ import Card from './Card';
 
 class CardList extends React.Component {
   render() {
-    const { cardList } = this.props;
+    const { cardList, deleteCard } = this.props;
     return (
       <div>
         {cardList.length > 0
-        && cardList.map((card, index) => (
-          <div key={ index }>
+        && cardList.map((card) => (
+          <div className={ card.cardName } key={ card.cardName }>
             <Card
+              key={ card.cardName }
               cardName={ card.cardName }
               cardDescription={ card.cardDescription }
               cardAttr1={ card.cardAttr1 }
@@ -20,7 +21,14 @@ class CardList extends React.Component {
               cardRare={ card.cardRare }
               cardTrunfo={ card.cardTrunfo }
             />
-            <button type="button" data-testid="delete-button">Excluir</button>
+            <button
+              type="button"
+              className={ card.cardName }
+              data-testid="delete-button"
+              onClick={ deleteCard }
+            >
+              Excluir
+            </button>
           </div>
         ))}
       </div>
@@ -29,7 +37,11 @@ class CardList extends React.Component {
 }
 
 CardList.propTypes = {
-  cardList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  cardList: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.object).isRequired,
+    PropTypes.string.isRequired,
+  ]).isRequired,
+  deleteCard: PropTypes.func.isRequired,
 };
 
 export default CardList;
