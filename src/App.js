@@ -33,11 +33,13 @@ class App extends React.Component {
   dataValidation() {
     const { cardName, cardDescription, cardImage, cardAttr1 } = this.state;
     const maximumNumber = 90;
+    const minimumNumber = 0;
     if (
       cardName !== ''
       && cardDescription !== ''
       && cardImage !== ''
       && cardAttr1 <= maximumNumber
+      && cardAttr1 >= minimumNumber
     ) {
       return this.setState({
         isSaveButtonDisabled: false,
