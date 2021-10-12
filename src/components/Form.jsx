@@ -29,7 +29,6 @@ class Form extends React.Component {
                 name="cardName"
                 id="name-input"
                 data-testid="name-input"
-                required
                 value={ cardName }
                 onChange={ onInputChange }
               />
@@ -43,7 +42,6 @@ class Form extends React.Component {
                 name="cardDescription"
                 id="description-input"
                 data-testid="description-input"
-                required
                 value={ cardDescription }
                 onChange={ onInputChange }
               />
@@ -60,7 +58,6 @@ class Form extends React.Component {
                 data-testid="attr1-input"
                 max="90"
                 min="0"
-                required
                 value={ cardAttr1 }
                 onChange={ onInputChange }
               />
@@ -77,7 +74,6 @@ class Form extends React.Component {
                 data-testid="attr2-input"
                 max="90"
                 min="0"
-                required
                 value={ cardAttr2 }
                 onChange={ onInputChange }
               />
@@ -94,7 +90,6 @@ class Form extends React.Component {
                 data-testid="attr3-input"
                 max="90"
                 min="0"
-                required
                 value={ cardAttr3 }
                 onChange={ onInputChange }
               />
@@ -109,7 +104,6 @@ class Form extends React.Component {
                 name="cardImage"
                 id="image-input"
                 data-testid="image-input"
-                required
                 value={ cardImage }
                 onChange={ onInputChange }
               />
@@ -122,7 +116,6 @@ class Form extends React.Component {
               name="cardRare"
               id="rare-input"
               data-testid="rare-input"
-              required
               value={ cardRare }
               onChange={ onInputChange }
             >
@@ -139,7 +132,6 @@ class Form extends React.Component {
                 name="cardTrunfo"
                 id="trunfo-input"
                 data-testid="trunfo-input"
-                required
                 checked={ cardTrunfo }
                 onChange={ onInputChange }
               />
