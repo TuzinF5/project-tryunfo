@@ -4,17 +4,42 @@ import Card from './Card';
 
 class CardList extends React.Component {
   render() {
-    const { cardList, nameFilter, rareFilter, deleteCard } = this.props;
+    const { cardList, nameFilter, rareFilter, checkedTrunfo, deleteCard } = this.props;
     return (
       <div>
-        {cardList
-          .filter((card) => card.cardName.includes(nameFilter))
-          .filter((card) => card.cardRare === rareFilter || rareFilter === 'todas')
+        {cardList > 0 || checkedTrunfo === true ? cardList
+          .filter((card) => card.cardTrunfo === 'on')
           .map((card) => ( // Link onde vi oque eu precisava para fazer a vericação necessária do requisito 10 => https://github.com/tryber/sd-013-a-project-tryunfo-beta/pull/18/commits/78271c4a6ead792ccf456af1f1761d897efa75dc#:~:text=))%7D-,%7BcardList,.filter((card)%20%3D%3E%20card.cardName.includes(filterName)),-.map((card%2C%20i
 
             <div className={ card.cardName } key={ card.cardName }>
               <Card
                 key={ card.cardName }
+                cardName={ card.cardName }
+                cardDescription={ card.cardDescription }
+                cardAttr1={ card.cardAttr1 }
+                cardAttr2={ card.cardAttr2 }
+                cardAttr3={ card.cardAttr3 }
+                cardImage={ card.cardImage }
+                cardRare={ card.cardRare }
+                cardTrunfo={ card.cardTrunfo }
+              />
+              <button
+                type="button"
+                className={ card.cardName }
+                data-testid="delete-button"
+                onClick={ deleteCard }
+              >
+                Excluir
+              </button>
+            </div>
+          )) : cardList
+          .filter((card) => card.cardName.includes(nameFilter))
+          .filter((card) => card.cardRare === rareFilter || rareFilter === 'todas')
+          .map((card, index) => ( // Link onde vi oque eu precisava para fazer a vericação necessária do requisito 10 => https://github.com/tryber/sd-013-a-project-tryunfo-beta/pull/18/commits/78271c4a6ead792ccf456af1f1761d897efa75dc#:~:text=))%7D-,%7BcardList,.filter((card)%20%3D%3E%20card.cardName.includes(filterName)),-.map((card%2C%20i
+
+            <div className={ card.cardName } key={ card.cardName }>
+              <Card
+                key={ index }
                 cardName={ card.cardName }
                 cardDescription={ card.cardDescription }
                 cardAttr1={ card.cardAttr1 }
@@ -45,6 +70,7 @@ CardList.propTypes = {
     PropTypes.string.isRequired,
   ]).isRequired,
   rareFilter: PropTypes.string.isRequired,
+  checkedTrunfo: PropTypes.bool.isRequired,
   nameFilter: PropTypes.string.isRequired,
   deleteCard: PropTypes.func.isRequired,
 };
