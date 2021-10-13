@@ -3,6 +3,7 @@ import Card from './components/Card';
 import CardList from './components/CardList';
 import FilterCards from './components/FilterCards';
 import Form from './components/Form';
+import RarityFilter from './components/RarityFilter';
 
 class App extends React.Component {
   constructor() {
@@ -20,6 +21,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cardList: [],
       nameFilter: '',
+      rareFilter: 'todas',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -190,6 +192,12 @@ class App extends React.Component {
         <div>
           <FilterCards
             nameFilter={ valueState.nameFilter }
+            onInputChange={ this.onInputChange }
+          />
+        </div>
+        <div>
+          <RarityFilter
+            rareFilter={ valueState.rareFilter }
             onInputChange={ this.onInputChange }
           />
         </div>
