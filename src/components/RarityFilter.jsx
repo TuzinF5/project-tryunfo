@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class RarityFilter extends React.Component {
   render() {
-    const { rareFilter, onInputChange } = this.props;
+    const { rareFilter, onInputChange, disabledInput } = this.props;
     return (
       <label htmlFor="rare-filter">
         Filtre por raridade da carta
@@ -13,6 +13,7 @@ class RarityFilter extends React.Component {
           data-testid="rare-filter"
           value={ rareFilter }
           onChange={ onInputChange }
+          disabled={ disabledInput }
         >
           <option value="todas">todas</option>
           <option value="normal">normal</option>
@@ -27,6 +28,7 @@ class RarityFilter extends React.Component {
 RarityFilter.propTypes = {
   rareFilter: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
+  disabledInput: PropTypes.bool.isRequired,
 };
 
 export default RarityFilter;
