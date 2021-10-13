@@ -4,10 +4,10 @@ import Card from './Card';
 
 class CardList extends React.Component {
   render() {
-    const { cardList, deleteCard } = this.props;
+    const { cardList, nameFilter, deleteCard } = this.props;
     return (
       <div>
-        {cardList.map((card) => (
+        {cardList.filter((card) => card.cardName.includes(nameFilter)).map((card) => (
           <div className={ card.cardName } key={ card.cardName }>
             <Card
               key={ card.cardName }
@@ -40,6 +40,7 @@ CardList.propTypes = {
     PropTypes.arrayOf(PropTypes.object).isRequired,
     PropTypes.string.isRequired,
   ]).isRequired,
+  nameFilter: PropTypes.string.isRequired,
   deleteCard: PropTypes.func.isRequired,
 };
 
