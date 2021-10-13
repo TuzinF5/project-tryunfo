@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import CardList from './components/CardList';
 import FilterCards from './components/FilterCards';
+import FilterTrunfo from './components/FilterTrunfo';
 import Form from './components/Form';
 import RarityFilter from './components/RarityFilter';
 
@@ -22,6 +23,8 @@ class App extends React.Component {
       cardList: [],
       nameFilter: '',
       rareFilter: 'todas',
+      checkedTrunfo: false,
+      disabledInput: false,
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -30,6 +33,7 @@ class App extends React.Component {
     this.numericalInputValidation = this.numericalInputValidation.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
     this.validationCardTrunfo = this.validationCardTrunfo.bind(this);
+    this.validationChecked = this.validationChecked.bind(this);
   }
 
   onInputChange({ target: { name, value } }) {
@@ -160,6 +164,21 @@ class App extends React.Component {
     }
   }
 
+  validationChecked() {
+    const { checkedTrunfo } = this.state;
+    if (checkedTrunfo) {
+      this.setState({
+        checkedTrunfo: false,
+        disabledInput: false,
+      });
+    } else {
+      this.setState({
+        checkedTrunfo: true,
+        disabledInput: true,
+      });
+    }
+  }
+
   render() {
     const valueState = this.state;
     return (
@@ -193,12 +212,20 @@ class App extends React.Component {
           <FilterCards
             nameFilter={ valueState.nameFilter }
             onInputChange={ this.onInputChange }
+            disabledInput={ valueState.disabledInput }
           />
         </div>
         <div>
           <RarityFilter
             rareFilter={ valueState.rareFilter }
             onInputChange={ this.onInputChange }
+            disabledInput={ valueState.disabledInput }
+          />
+        </div>
+        <div>
+          <FilterTrunfo
+            checkedTrunfo={ valueState.checkedTrunfo }
+            validationChecked={ this.validationChecked }
           />
         </div>
         <CardList
