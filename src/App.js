@@ -232,6 +232,7 @@ class App extends React.Component {
           cardList={ valueState.cardList }
           nameFilter={ valueState.nameFilter }
           rareFilter={ valueState.rareFilter }
+          checkedTrunfo={ valueState.checkedTrunfo }
           deleteCard={ this.deleteCard }
         />
       </div>
