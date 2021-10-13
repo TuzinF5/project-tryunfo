@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card';
 import CardList from './components/CardList';
+import FilterCards from './components/FilterCards';
 import Form from './components/Form';
 
 class App extends React.Component {
@@ -185,6 +186,9 @@ class App extends React.Component {
           cardRare={ valueState.cardRare }
           cardTrunfo={ valueState.cardTrunfo }
         />
+        <div>
+          <FilterCards />
+        </div>
         <CardList
           cardList={ valueState.cardList }
           deleteCard={ this.deleteCard }
