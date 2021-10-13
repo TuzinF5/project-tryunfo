@@ -147,6 +147,7 @@ class App extends React.Component {
       this.setState({
         cardList: list,
         hasTrunfo: false,
+        cardTrunfo: false,
       });
     } else {
       this.setState({
