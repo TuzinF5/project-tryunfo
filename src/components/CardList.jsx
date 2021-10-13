@@ -7,7 +7,8 @@ class CardList extends React.Component {
     const { cardList, nameFilter, deleteCard } = this.props;
     return (
       <div>
-        {cardList.filter((card) => card.cardName.includes(nameFilter)).map((card) => (
+        {cardList.filter((card) => card.cardName.includes(nameFilter)).map((card) => ( // Link onde vi oque eu precisava para fazer a vericação necessária do requisito 10 => https://github.com/tryber/sd-013-a-project-tryunfo-beta/pull/18/commits/78271c4a6ead792ccf456af1f1761d897efa75dc#:~:text=))%7D-,%7BcardList,.filter((card)%20%3D%3E%20card.cardName.includes(filterName)),-.map((card%2C%20i
+
           <div className={ card.cardName } key={ card.cardName }>
             <Card
               key={ card.cardName }
