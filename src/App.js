@@ -5,6 +5,7 @@ import FilterCards from './components/FilterCards';
 import FilterTrunfo from './components/FilterTrunfo';
 import Form from './components/Form';
 import RarityFilter from './components/RarityFilter';
+import './style.css';
 
 class App extends React.Component {
   constructor() {
