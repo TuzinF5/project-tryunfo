@@ -7,8 +7,7 @@ class CardList extends React.Component {
     const { cardList, deleteCard } = this.props;
     return (
       <div>
-        {cardList.length > 0
-        && cardList.map((card) => (
+        {cardList.map((card) => (
           <div className={ card.cardName } key={ card.cardName }>
             <Card
               key={ card.cardName }
