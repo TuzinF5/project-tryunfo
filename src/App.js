@@ -204,6 +204,7 @@ class App extends React.Component {
         <CardList
           cardList={ valueState.cardList }
           nameFilter={ valueState.nameFilter }
+          rareFilter={ valueState.rareFilter }
           deleteCard={ this.deleteCard }
         />
       </div>
