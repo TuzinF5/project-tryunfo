@@ -19,6 +19,7 @@ class App extends React.Component {
       hasTrunfo: false,
       isSaveButtonDisabled: true,
       cardList: [],
+      nameFilter: '',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -187,7 +188,10 @@ class App extends React.Component {
           cardTrunfo={ valueState.cardTrunfo }
         />
         <div>
-          <FilterCards />
+          <FilterCards
+            nameFilter={ valueState.nameFilter }
+            onInputChange={ this.onInputChange }
+          />
         </div>
         <CardList
           cardList={ valueState.cardList }
