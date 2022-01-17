@@ -16,9 +16,7 @@ class Card extends React.Component {
       card,
       cardList,
     } = this.props;
-
     const result = cardList.filter((cardT) => cardT.cardTrunfo === true);
-
     return (
       <section id={ card }>
         <div id="cartao-preview">
@@ -67,6 +65,7 @@ class Card extends React.Component {
 }
 
 Card.defaultProps = {
+  card: '',
   cardTrunfo: '',
   cardName: '',
   cardDescription: '',
@@ -79,15 +78,13 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  card: PropTypes.shape({
-    cardTrunfo: PropTypes.bool.isRequired,
-  }).isRequired,
+  card: PropTypes.string,
   cardAttr1: PropTypes.string,
   cardAttr2: PropTypes.string,
   cardAttr3: PropTypes.string,
   cardDescription: PropTypes.string,
   cardImage: PropTypes.string,
-  cardList: PropTypes.arrayOf,
+  cardList: PropTypes.arrayOf(PropTypes.object),
   cardName: PropTypes.string,
   cardRare: PropTypes.string,
   cardTrunfo: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
