@@ -6,19 +6,20 @@ class RarityFilter extends React.Component {
     const { rareFilter, onInputChange, disabledInput } = this.props;
     return (
       <label htmlFor="rare-filter">
-        Filtre por raridade da carta
+        <p>Filtre por raridade da carta</p>
         <select
           name="rareFilter"
           id="rare-filter"
+          className="input"
           data-testid="rare-filter"
           value={ rareFilter }
           onChange={ onInputChange }
           disabled={ disabledInput }
         >
-          <option value="todas">todas</option>
-          <option value="normal">normal</option>
-          <option value="raro">raro</option>
-          <option value="muito raro">muito raro</option>
+          <option value="Todas">Todas</option>
+          <option value="Normal">Normal</option>
+          <option value="Raro">Raro</option>
+          <option value="Muito raro">Muito raro</option>
         </select>
       </label>
     );

@@ -6,12 +6,14 @@ class FilterCards extends React.Component {
     const { nameFilter, onInputChange, disabledInput } = this.props;
     return (
       <label htmlFor="name-filter">
-        Filtre pelo nome da carta
+        <p>Filtre pelo nome da carta</p>
         <input
           type="text"
           name="nameFilter"
           id="name-filter"
+          className="input"
           data-testid="name-filter"
+          placeholder="Digite um nome"
           value={ nameFilter }
           onChange={ onInputChange }
           disabled={ disabledInput }

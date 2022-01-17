@@ -5,7 +5,8 @@ class FilterTrunfo extends React.Component {
   render() {
     const { checkedTrunfo, validationChecked } = this.props;
     return (
-      <label htmlFor="trunfo-filter">
+      <label className="super-trunfo" htmlFor="trunfo-filter">
+        <p>Super Trunfo</p>
         <input
           type="checkbox"
           name="trunfoFilter"
@@ -14,7 +15,6 @@ class FilterTrunfo extends React.Component {
           checked={ checkedTrunfo }
           onChange={ validationChecked }
         />
-        Super Trunfo
       </label>
     );
   }
