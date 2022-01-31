@@ -1,0 +1,1 @@
+Essa aplicação simula um jogo de Super Trunfo, com a criação das cartas de baralho da escolha do usuário.
