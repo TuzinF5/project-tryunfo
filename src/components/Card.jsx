@@ -37,15 +37,15 @@ class Card extends React.Component {
           <div id="div-attrs">
             <p className="chave" data-testid="attr1-card">
               Inteligência
-              {cardAttr1.length > 0 && `__________________${cardAttr1}`}
+              {cardAttr1.length > 0 && `___${cardAttr1}`}
             </p>
             <p className="chave" data-testid="attr2-card">
               Habilidade
-              {cardAttr2.length > 0 && `___________________${cardAttr2}`}
+              {cardAttr2.length > 0 && `___${cardAttr2}`}
             </p>
             <p className="chave" data-testid="attr3-card">
               Defesa
-              {cardAttr3.length > 0 && `_______________________${cardAttr3}`}
+              {cardAttr3.length > 0 && `___${cardAttr3}`}
             </p>
           </div>
           <div id="raridades">
