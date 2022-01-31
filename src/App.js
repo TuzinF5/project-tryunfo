@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 /* eslint-disable react/jsx-max-depth */
 import React from 'react';
 import Card from './components/Card';
@@ -7,6 +8,7 @@ import FilterTrunfo from './components/FilterTrunfo';
 import Form from './components/Form';
 import RarityFilter from './components/RarityFilter';
 import './style.css';
+import './responsiveStyle.css';
 
 class App extends React.Component {
   constructor() {

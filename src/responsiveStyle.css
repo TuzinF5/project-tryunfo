@@ -1,0 +1,13 @@
+/* stylelint-disable selector-max-specificity */
+
+@media screen and ( max-width : 480px ) {
+
+  #form-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #form, #card-preview {
+    width: 70%;
+  }
+}
