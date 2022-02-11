@@ -7,8 +7,8 @@ import FilterCards from './components/FilterCards';
 import FilterTrunfo from './components/FilterTrunfo';
 import Form from './components/Form';
 import RarityFilter from './components/RarityFilter';
-import './style.css';
-import './responsiveStyle.css';
+import './styles/style.css';
+import './styles/responsiveStyle.css';
 
 class App extends React.Component {
   constructor() {
