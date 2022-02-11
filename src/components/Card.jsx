@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RickMorty from './Rick-and-morty-black-white.png';
+import RickMorty from '../images/Rick-and-morty-black-white.png';
 
 class Card extends React.Component {
   render() {
