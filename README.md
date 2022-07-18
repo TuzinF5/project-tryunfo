@@ -50,7 +50,7 @@
 <div>
   <h3>Para conferir o resultado:</h3>
 
-  Acesse o **[Jogo Super Trunfo - Rick And Morty](https://super-trump-game-project.vercel.app/)** e divirta-se criando suas cartas.
+  Acesse o **[Jogo Super Trunfo - Rick And Morty](https://super-trunfo-game-project.vercel.app/)** e divirta-se criando suas cartas.
 
   Não precisa seguir o tema proposto, deixe sua imaginção tomar conta, espero que goste. 🤗
 
